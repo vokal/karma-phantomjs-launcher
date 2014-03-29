@@ -1,7 +1,7 @@
 {
-  "name": "karma-phantomjs-launcher",
+  "name": "karma-phantomjs-launcher-nonet",
   "version": "0.1.2",
-  "description": "A Karma plugin. Launcher for PhantomJS.",
+  "description": "Fork of karma-phantomjs-launcher - it never downloads phantomjs from the internet.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +15,8 @@
     "karma-launcher",
     "phantomjs"
   ],
-  "author": "Vojta Jina <vojta.jina@gmail.com>",
+  "author": "Roman Masek <romario333@gmail.com>",
   "dependencies": {
-    "phantomjs": "~1.9"
   },
   "peerDependencies": {
     "karma": ">=0.9"
@@ -28,14 +27,5 @@
     "grunt-npm": "~0.0.2",
     "grunt-bump": "~0.0.7",
     "grunt-auto-release": "~0.0.2"
-  },
-  "contributors": [
-    "Friedel Ziegelmayer <friedel.ziegelmayer@gmail.com>",
-    "Huafu Gandon <huafu.gandon@gmail.com>",
-    "Edward Hutchins <eahutchins@gmail.com>",
-    "Eryk Napierała <eryk.piast@gmail.com>",
-    "Jason Dobry <jason.dobry@gmail.com>",
-    "Rob Barreca <rob.barreca@inmobi.com>",
-    "nherzing <nherzing@gmail.com>"
-  ]
+  }
 }

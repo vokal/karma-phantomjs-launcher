@@ -12,6 +12,8 @@ function serializeOption(value) {
 var PhantomJSBrowser = function(baseBrowserDecorator, config, args) {
   baseBrowserDecorator(this);
 
+  this.DEFAULT_CMD = config.cmd;
+
   var options = args && args.options || config && config.options || {};
   var flags = args && args.flags || config && config.flags || [];
 
@@ -42,11 +44,6 @@ var PhantomJSBrowser = function(baseBrowserDecorator, config, args) {
 PhantomJSBrowser.prototype = {
   name: 'PhantomJS',
 
-  DEFAULT_CMD: {
-    linux: require('phantomjs').path,
-    darwin: require('phantomjs').path,
-    win32: require('phantomjs').path
-  },
   ENV_CMD: 'PHANTOMJS_BIN'
 };
 
