@@ -1,9 +1,10 @@
 {
-  "name": "karma-phantomjs-launcher",
+  "name": "karma-phantomjs-launcher-path",
   "version": "0.1.2",
-  "description": "A Karma plugin. Launcher for PhantomJS.",
+  "description": "Fork of karma-phantomjs-launcher - uses phantomjs from path.",
   "main": "index.js",
   "scripts": {
+    "install": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,9 +16,9 @@
     "karma-launcher",
     "phantomjs"
   ],
-  "author": "Vojta Jina <vojta.jina@gmail.com>",
+  "author": "Vokal <webdevelopers@vokal.io>",
   "dependencies": {
-    "phantomjs": "~1.9"
+    "whereis": "^0.4.0"
   },
   "peerDependencies": {
     "karma": ">=0.9"
@@ -36,6 +37,7 @@
     "Eryk Napierała <eryk.piast@gmail.com>",
     "Jason Dobry <jason.dobry@gmail.com>",
     "Rob Barreca <rob.barreca@inmobi.com>",
-    "nherzing <nherzing@gmail.com>"
+    "nherzing <nherzing@gmail.com>",
+    "Roman Masek <romario333@gmail.com>"
   ]
 }

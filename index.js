@@ -39,13 +39,14 @@ var PhantomJSBrowser = function(baseBrowserDecorator, config, args) {
   };
 };
 
+var phantomjsPath = require('./location').location;
+
 PhantomJSBrowser.prototype = {
   name: 'PhantomJS',
-
   DEFAULT_CMD: {
-    linux: require('phantomjs').path,
-    darwin: require('phantomjs').path,
-    win32: require('phantomjs').path
+    linux: phantomjsPath,
+    darwin: phantomjsPath,
+    win32: phantomjsPath
   },
   ENV_CMD: 'PHANTOMJS_BIN'
 };
