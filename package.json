@@ -1,9 +1,10 @@
 {
-  "name": "karma-phantomjs-launcher-nonet",
+  "name": "karma-phantomjs-launcher-path",
   "version": "0.1.2",
-  "description": "Fork of karma-phantomjs-launcher - it never downloads phantomjs from the internet.",
+  "description": "Fork of karma-phantomjs-launcher - uses phantomjs from path.",
   "main": "index.js",
   "scripts": {
+    "install": "node install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
