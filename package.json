@@ -16,7 +16,7 @@
     "karma-launcher",
     "phantomjs"
   ],
-  "author": "Vokal <webdeveloper@vokal.io>",
+  "author": "Vokal <webdevelopers@vokal.io>",
   "dependencies": {
     "whereis": "^0.4.0"
   },
