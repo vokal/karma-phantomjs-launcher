@@ -16,7 +16,7 @@
     "karma-launcher",
     "phantomjs"
   ],
-  "author": "Roman Masek <romario333@gmail.com>",
+  "author": "Vokal <webdeveloper@vokal.io>",
   "dependencies": {
     "whereis": "^0.4.0"
   },
@@ -29,5 +29,15 @@
     "grunt-npm": "~0.0.2",
     "grunt-bump": "~0.0.7",
     "grunt-auto-release": "~0.0.2"
-  }
+  },
+  "contributors": [
+    "Friedel Ziegelmayer <friedel.ziegelmayer@gmail.com>",
+    "Huafu Gandon <huafu.gandon@gmail.com>",
+    "Edward Hutchins <eahutchins@gmail.com>",
+    "Eryk Napierała <eryk.piast@gmail.com>",
+    "Jason Dobry <jason.dobry@gmail.com>",
+    "Rob Barreca <rob.barreca@inmobi.com>",
+    "nherzing <nherzing@gmail.com>",
+    "Roman Masek <romario333@gmail.com>"
+  ]
 }
