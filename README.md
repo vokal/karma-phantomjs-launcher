@@ -1,26 +1,26 @@
-# karma-phantomjs-launcher-nonet
+# karma-phantomjs-launcher-path
 
-> Launcher for [PhantomJS] - without dependency on [phantomjs npm package].
+> Launcher for [PhantomJS] - without dependency on [phantomjs npm package] and using phantomjs found in PATH.
 
-Original [karma-phantomjs-launcher] depends on the `phantomjs` package. This can be sometimes problematic as `phantomjs` package downloads [PhantomJS] from the third-party website. While this download can be prevented by making sure that you have correct [PhantomJS] version in the `PATH`, this is not always practical.
+The original [karma-phantomjs-launcher] depends on the `phantomjs` package. This can be sometimes problematic as the `phantomjs` package downloads [PhantomJS] from a third-party website using the version set in the npm package and has apparent issues finding existing installs in PATH.
 
-This package removes `phantomjs` from dependencies and requires you to set the path to [PhantomJS] explicitly.
+This package removes `phantomjs` from dependencies and looks in PATH using whereis during install.
 
 ## Installation
 
-The easiest way is to keep `karma-phantomjs-launcher-nonet` as a devDependency in your `package.json`.
+The easiest way is to keep `karma-phantomjs-launcher-path` as a devDependency in your `package.json`.
 ```json
 {
   "devDependencies": {
     "karma": "~0.10",
-    "karma-phantomjs-launcher-nonet": "~0.1"
+    "karma-phantomjs-launcher-path": "~0.1"
   }
 }
 ```
 
-You can simple do it by:
+You can simply do it by:
 ```bash
-npm install karma-phantomjs-launcher-nonet --save-dev
+npm install karma-phantomjs-launcher-path --save-dev
 ```
 
 ## Configuration
@@ -28,16 +28,10 @@ npm install karma-phantomjs-launcher-nonet --save-dev
 // karma.conf.js
 module.exports = function(config) {
   config.set({
-    browsers: ['PhantomJS'],
-
-    phantomjsLauncher: {
-      // configure PhantomJS executable for each platform
-      cmd: {
-        linux: path.join(__dirname, 'target/phantomjs/linux64/phantomjs'),
-        darwin: path.join(__dirname, 'target/phantomjs/darwin/phantomjs'),
-        win32: path.join(__dirname, 'target/phantomjs/win/phantomjs.exe')
-      }
-    }
+    browsers: ['PhantomJS']
+    plugins: [
+      "karma-phantomjs-launcher-path"
+    ]
   });
 };
 ```
