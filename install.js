@@ -8,8 +8,9 @@ function writeLocationFile( err, location )
 {
     if( err )
     {
-        console.log(chalk.red( err ));
-        console.log(chalk.yellow( "If phantomjs is not in PATH, install phantomjs and then install karma-phantomjs-launcher-path again" ));
+        console.log( chalk.red( err ) );
+        console.log( chalk.yellow( "If phantomjs is not in PATH, install "
+            + "phantomjs and then install karma-phantomjs-launcher-path again" ) );
         return;
     }
 
